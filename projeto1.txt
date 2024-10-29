@@ -1,2 +1,0 @@
-git status - informa se ha arquivos incluidos ou nao no controle de versao, ou se algum arquivo foi atualizado
-commits - sao versoes do codigo
