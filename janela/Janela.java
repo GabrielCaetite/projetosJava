@@ -52,8 +52,8 @@ public class Janela extends Frame{
         pack();
     }
 
-    //abrir(executa) janela
     //criar um objeto do tipo janela
+    //abrir(executar) janela
     public static void main(String [] arg){
         Janela j1 = new Janela();
         j1.setVisible(true);
