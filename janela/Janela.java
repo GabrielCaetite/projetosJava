@@ -16,7 +16,7 @@ public class Janela extends Frame{
     private Panel p2;
 
     public Janela(){
-        //instanciacao de componentes
+        //instanciando os componentes
         l1 = new Label("numero 1");
         l2 = new Label("numero 2");
         l3 = new Label("numero 3");
@@ -35,6 +35,7 @@ public class Janela extends Frame{
         p2.setLayout(new GridLayout(1,4));
         setLayout(new BorderLayout());
 
+        //adicionando os componentes nos paineis
         p1.add(l1);
         p1.add(tf1);
         p1.add(l2);
