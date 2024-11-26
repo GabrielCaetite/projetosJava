@@ -13,7 +13,6 @@ public class Janela extends Frame{
     private Button bt2;
     private Button bt3;
     private Button bt4;
-    private Button bt5;
     private Panel p1;
     private Panel p2;
 
@@ -65,24 +64,38 @@ public class Janela extends Frame{
         add(p2, BorderLayout.SOUTH);
         pack();
     }
-
+    int n1=0, n2=0;
+    float soma=0;
     class AcaoBT1 implements ActionListener{
         public void actionPerformed (ActionEvent ev){
-            tf3.setText(tf1.getText()+tf2.getText());
+            n1 = Integer.parseInt(tf1.getText());
+            n2 = Integer.parseInt(tf2.getText());
+            System.out.println(n1+n2);
         }
     }
     class AcaoBT2 implements ActionListener{
         public void actionPerformed (ActionEvent ev){
+            n1 = Integer.parseInt(tf1.getText());
+            n2 = Integer.parseInt(tf2.getText());
+            System.out.println(n1-n2);
         }
     }
     class AcaoBT3 implements ActionListener{
         public void actionPerformed (ActionEvent ev){
+            n1 = Integer.parseInt(tf1.getText());
+            n2 = Integer.parseInt(tf2.getText());
+            System.out.println(n1*n2);
         }
     }
     class AcaoBT4 implements ActionListener{
         public void actionPerformed (ActionEvent ev){
+            n1 = Integer.parseInt(tf1.getText());
+            n2 = Integer.parseInt(tf2.getText());
+            System.out.println(n1/n2);
         }
     }
+
+
 
     //criar um objeto do tipo janela
     //abrir(executar) janela
