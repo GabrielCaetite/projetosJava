@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.event.*;
 
 public class Janela extends Frame{
     //declaracao dos componentes
@@ -12,14 +13,16 @@ public class Janela extends Frame{
     private Button bt2;
     private Button bt3;
     private Button bt4;
+    private Button bt5;
     private Panel p1;
     private Panel p2;
 
+    //construtor
     public Janela(){
         //instanciando os componentes
         l1 = new Label("numero 1");
         l2 = new Label("numero 2");
-        l3 = new Label("numero 3");
+        l3 = new Label("resultado");
         tf1 = new TextField();
         tf2 = new TextField();
         tf3 = new TextField();
@@ -29,6 +32,16 @@ public class Janela extends Frame{
         bt4 = new Button("/");
         p1 = new Panel();
         p2 = new Panel();
+        bt1.addActionListener(new AcaoBT1());
+        bt2.addActionListener(new AcaoBT2());
+        bt3.addActionListener(new AcaoBT3());
+        bt4.addActionListener(new AcaoBT4());
+
+        addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent ev){
+                System.exit(0);
+            }
+        });
 
         //insere no painel 1 e 2 um layout do formato gridlayout
         p1.setLayout(new GridLayout(6,1));
@@ -42,7 +55,7 @@ public class Janela extends Frame{
         p1.add(tf2);
         p1.add(l3);
         p1.add(tf3);
-        p2.add(bt1);
+        p2.add(bt1);    
         p2.add(bt2);
         p2.add(bt3);
         p2.add(bt4);
@@ -51,6 +64,24 @@ public class Janela extends Frame{
         //posiciona no sul o painel 2
         add(p2, BorderLayout.SOUTH);
         pack();
+    }
+
+    class AcaoBT1 implements ActionListener{
+        public void actionPerformed (ActionEvent ev){
+            tf3.setText(tf1.getText()+tf2.getText());
+        }
+    }
+    class AcaoBT2 implements ActionListener{
+        public void actionPerformed (ActionEvent ev){
+        }
+    }
+    class AcaoBT3 implements ActionListener{
+        public void actionPerformed (ActionEvent ev){
+        }
+    }
+    class AcaoBT4 implements ActionListener{
+        public void actionPerformed (ActionEvent ev){
+        }
     }
 
     //criar um objeto do tipo janela
