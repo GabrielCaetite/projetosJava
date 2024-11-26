@@ -32,9 +32,6 @@ public class Janela extends Frame{
         p1 = new Panel();
         p2 = new Panel();
         bt1.addActionListener(new AcaoBT1());
-        bt2.addActionListener(new AcaoBT2());
-        bt3.addActionListener(new AcaoBT3());
-        bt4.addActionListener(new AcaoBT4());
 
         addWindowListener(new WindowAdapter(){
             public void windowClosing(WindowEvent ev){
@@ -73,28 +70,6 @@ public class Janela extends Frame{
             System.out.println(n1+n2);
         }
     }
-    class AcaoBT2 implements ActionListener{
-        public void actionPerformed (ActionEvent ev){
-            n1 = Integer.parseInt(tf1.getText());
-            n2 = Integer.parseInt(tf2.getText());
-            System.out.println(n1-n2);
-        }
-    }
-    class AcaoBT3 implements ActionListener{
-        public void actionPerformed (ActionEvent ev){
-            n1 = Integer.parseInt(tf1.getText());
-            n2 = Integer.parseInt(tf2.getText());
-            System.out.println(n1*n2);
-        }
-    }
-    class AcaoBT4 implements ActionListener{
-        public void actionPerformed (ActionEvent ev){
-            n1 = Integer.parseInt(tf1.getText());
-            n2 = Integer.parseInt(tf2.getText());
-            System.out.println(n1/n2);
-        }
-    }
-
 
 
     //criar um objeto do tipo janela
